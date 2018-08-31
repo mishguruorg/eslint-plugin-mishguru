@@ -16,10 +16,12 @@ const rule = {
         const scope = context.getScope()
         const parentFunction = scope.variableScope.block
 
+        // must be inside an async function
         if (parentFunction.async !== true) {
           return
         }
 
+        // trim ancestors to start at parent function
         const ancestors = context.getAncestors()
         const parentFunctionIndex = ancestors.indexOf(parentFunction)
         ancestors.splice(0, parentFunctionIndex + 1)
