@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-mishguru",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Custom ESLint rules for the Mish Guru codebase",
   "main": "dist/index.js",
   "scripts": {
