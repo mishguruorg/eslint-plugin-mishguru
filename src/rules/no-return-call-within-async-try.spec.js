@@ -21,7 +21,7 @@ async function fn () {
   try {
     return await promise()
   } catch (error) {
-    console.log(error)
+    return handleError(error)
   }
 }
 `,
@@ -32,7 +32,9 @@ async function fn () {
       return promise()
     }
   } catch (error) {
-    console.log(error)
+    return handleError(error)
+  } finally {
+    return resolve()
   }
 }
 `

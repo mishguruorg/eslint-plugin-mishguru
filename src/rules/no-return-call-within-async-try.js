@@ -24,14 +24,30 @@ const rule = {
         const parentFunctionIndex = ancestors.indexOf(parentFunction)
         ancestors.splice(0, parentFunctionIndex + 1)
 
+        // must be inside a try statement
         const tryStatementIndex = ancestors.findIndex((n) => {
           return n.type === 'TryStatement'
         })
         if (tryStatementIndex < 0) {
           return
         }
+        const tryStatement = ancestors[tryStatementIndex]
         ancestors.splice(0, tryStatementIndex + 1)
 
+        // ignore catch clause
+        const catchClauseIndex = ancestors.findIndex((n) => {
+          return n.type === 'CatchClause'
+        })
+        if (catchClauseIndex > -1) {
+          return
+        }
+
+        // ignore finally call
+        if (ancestors[0] === tryStatement.finalizer) {
+          return
+        }
+
+        // must be part of a return statement
         const returnStatementIndex = ancestors.findIndex((n) => {
           return n.type === 'ReturnStatement'
         })
