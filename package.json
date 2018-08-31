@@ -1,0 +1,33 @@
+{
+  "name": "eslint-plugin-mishguru",
+  "version": "1.0.0",
+  "description": "Custom ESLint rules for the Mish Guru codebase",
+  "main": "dist/index.js",
+  "scripts": {
+    "precommit": "pkg-precommit",
+    "build": "pkg-build",
+    "prepublish": "npm run build",
+    "postpublish": "git push --tags",
+    "flow": "pkg-flow",
+    "lint": "pkg-lint",
+    "test": "NODE_ENV=test_local pkg-test",
+    "coverage": "NODE_ENV=test_local pkg-coverage",
+    "tidy": "pkg-tidy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mishguruorg/eslint-plugin-mishguru.git"
+  },
+  "author": "Mish Guru <devs@mish.guru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mishguruorg/eslint-plugin-mishguru/issues"
+  },
+  "homepage": "https://github.com/mishguruorg/eslint-plugin-mishguru#readme",
+  "dependencies": {
+    "@mishguru/package": "4.14.0"
+  },
+  "devDependencies": {
+    "eslint-ava-rule-tester": "2.0.2"
+  }
+}
