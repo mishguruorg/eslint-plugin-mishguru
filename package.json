@@ -25,7 +25,7 @@
   },
   "homepage": "https://github.com/mishguruorg/eslint-plugin-mishguru#readme",
   "dependencies": {
-    "@mishguru/package": "5.1.0"
+    "@mishguru/package": "5.3.0"
   },
   "devDependencies": {
     "eslint-ava-rule-tester": "3.0.0"
