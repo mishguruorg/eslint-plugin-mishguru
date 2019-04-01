@@ -1,6 +1,5 @@
 const allRules = {
   'no-return-call-within-async-try': require('./rules/no-return-call-within-async-try')
-    .default
 }
 
 function configureAsError(rules) {
