@@ -1,7 +1,7 @@
-import test from 'ava'
-import RuleTester from 'eslint-ava-rule-tester'
+const test = require('ava')
+const RuleTester = require('eslint-ava-rule-tester')
 
-import rule from './no-return-call-within-async-try'
+const rule = require('./no-return-call-within-async-try')
 
 const ruleTester = new RuleTester(test, {
   parser: 'babel-eslint'
