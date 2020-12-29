@@ -18,9 +18,9 @@
   "homepage": "https://github.com/mishguruorg/eslint-plugin-mishguru#readme",
   "dependencies": {},
   "devDependencies": {
-    "ava": "1.4.1",
-    "babel-eslint": "10.0.1",
-    "eslint": "5.16.0",
-    "eslint-ava-rule-tester": "3.0.0"
+    "ava": "3.14.0",
+    "babel-eslint": "10.1.0",
+    "eslint": "7.16.0",
+    "eslint-ava-rule-tester": "4.0.0"
   }
 }

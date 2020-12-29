@@ -4,7 +4,7 @@ const RuleTester = require('eslint-ava-rule-tester')
 const rule = require('./no-return-call-within-async-try')
 
 const ruleTester = new RuleTester(test, {
-  parser: 'babel-eslint'
+  parser: require.resolve('babel-eslint')
 })
 
 const ERRORS = [
